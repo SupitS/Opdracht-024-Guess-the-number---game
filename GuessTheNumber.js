@@ -1,23 +1,22 @@
+prompt("Welkom!")
+function guessNumber() {
+    var randomNum = Math.floor(Math.random() * 26);
 
-var guess = randomNum 
-var radomNum = Math.floor(Math.random() * 26);
-    prompt("Voer een nummer in van 0 tot 25 om te beginnen met raden... ")
+    // output to the console for debugging
+    console.log(randomNum);
+
+    // let user declare a variable
+    var guess;
+    guess = prompt("Please enter a number between 0 and 25 ")
     console.log("Your guess is: " + guess);
 
-    var guess_count = 0;
-    var guess_limit = 5;
-    var out_of_guesses = false;
-
-    while (guess != randomNum) not (out_of_guesses)
-        if (guess_count < guess_limit) {
-            guess = prompt("Probeer het nogmaals ")
-            guess_count += 1;
-        } else if (out_of_guesses = true);
-
-    if (out_of_guesses) {
-        prompt("Helaas, je hebt niet gewonnen ")
+    if (guess < randomNum){
+        window.alert("Your guess is too low");
+    } else if (guess > randomNum){
+        window.alert("Your guess is too high");
+    } else if (guess == randomNum){
+        window.alert("You guessed it, you win!!");
     } else {
-        window.alert("Gefeliciteerd je hebt gewonnen")
+        window.alert("Error")
     }
-
-
+}
